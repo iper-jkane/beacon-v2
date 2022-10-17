@@ -16,13 +16,13 @@ BEACONMODELNAME=beacon-v2-default-model
 
 for KIND in src json
 do
-	mkdir -p $UNITYPATH/models/$KIND/$BEACONMODELNAME
-	mkdir -p $UNITYPATH/framework/$KIND	
+	mkdir -p $UNITYPATH/$KIND/models/$BEACONMODELNAME
+	mkdir -p $UNITYPATH/$KIND/framework	
 done
 
 # $BASEDIR/beaconYamler.py -i $BEACONMODELPATH -t json -x yaml -o $UNITYPATH/models/src/$BEACONMODELNAME
 # $BASEDIR/beaconYamler.py -i $BEACONFRAMEWORKPATH -t json -x yaml -o $UNITYPATH/framework/src
 
 # recurring conversion from the source files to the exported versions
-$BASEDIR/beaconYamler.py -i $UNITYPATH/models/src/$BEACONMODELNAME -t yaml -x json -o $UNITYPATH/models/json/$BEACONMODELNAME
-$BASEDIR/beaconYamler.py -i $UNITYPATH/framework/src -t yaml -x json -o $UNITYPATH/framework/json
+$BASEDIR/beaconYamler.py -i $UNITYPATH/src/models/$BEACONMODELNAME -t yaml -x json -o $UNITYPATH/json/models/$BEACONMODELNAME
+$BASEDIR/beaconYamler.py -i $UNITYPATH/src/framework -t yaml -x json -o $UNITYPATH/json/framework
