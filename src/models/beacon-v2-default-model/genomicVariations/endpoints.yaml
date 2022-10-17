@@ -37,7 +37,7 @@ paths:
         '200':
           $ref: '#/components/responses/ResultsOKResponse'
         default:
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
     post:
       description: Get a list of example entries
       operationId: postExampleEntriesRequest
@@ -47,14 +47,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../../../framework/requests/beaconRequestBody.json
+              $ref: ../../../framework/requests/beaconRequestBody.yaml
         required: true
       responses:
         '200':
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
   /g_variants/{id}:
     parameters:
       - $ref: '#/components/parameters/entryId'
@@ -69,7 +69,7 @@ paths:
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
     post:
       description: Get details about one genomic variation, identified by its (unique)
         'id'
@@ -80,14 +80,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../../../framework/requests/beaconRequestBody.json
+              $ref: ../../../framework/requests/beaconRequestBody.yaml
         required: true
       responses:
         '200':
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
   /g_variants/{id}/biosamples:
     parameters:
       - $ref: '#/components/parameters/entryId'
@@ -106,7 +106,7 @@ paths:
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
     post:
       description: Get the biosamples list from one genomic variant, identified by
         its (unique) 'id'
@@ -117,14 +117,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../../../framework/requests/beaconRequestBody.json
+              $ref: ../../../framework/requests/beaconRequestBody.yaml
         required: true
       responses:
         '200':
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
   /g_variants/{id}/individuals:
     parameters:
       - $ref: '#/components/parameters/entryId'
@@ -143,7 +143,7 @@ paths:
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
     post:
       description: Get the biosamples list from one genomic variant, identified by
         its (unique) 'id'
@@ -154,14 +154,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../../../framework/requests/beaconRequestBody.json
+              $ref: ../../../framework/requests/beaconRequestBody.yaml
         required: true
       responses:
         '200':
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
 components:
   responses:
     ResultsOKResponse:
@@ -170,9 +170,9 @@ components:
         application/json:
           schema:
             oneOf:
-              - $ref: ../../../framework/responses/beaconBooleanResponse.json
-              - $ref: ../../../framework/responses/beaconCountResponse.json
-              - $ref: ../../../framework/responses/beaconResultsetsResponse.json
+              - $ref: ../../../framework/responses/beaconBooleanResponse.yaml
+              - $ref: ../../../framework/responses/beaconCountResponse.yaml
+              - $ref: ../../../framework/responses/beaconResultsetsResponse.yaml
   parameters:
     requestedSchema:
       name: requestedSchema
@@ -187,14 +187,14 @@ components:
       name: skip
       in: query
       schema:
-        $ref: ../../../framework/common/beaconCommonComponents.json#/definitions/Skip
+        $ref: ../../../framework/common/beaconCommonComponents.yaml#/definitions/Skip
     limit:
       name: limit
       in: query
       schema:
-        $ref: ../../../framework/common/beaconCommonComponents.json#/definitions/Limit
+        $ref: ../../../framework/common/beaconCommonComponents.yaml#/definitions/Limit
     includeResultsetResponses:
-      $ref: ../../../framework/common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses
+      $ref: ../../../framework/common/beaconCommonComponents.yaml#/definitions/IncludeResultsetResponses
     entryId:
       name: id
       in: path

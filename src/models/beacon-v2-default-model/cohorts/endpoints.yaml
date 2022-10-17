@@ -30,7 +30,7 @@ paths:
         '200':
           $ref: '#/components/responses/CollectionsResponse'
         default:
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
     post:
       description: Get a list of cohorts
       operationId: postCohortsRequest
@@ -40,14 +40,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../../../framework/requests/beaconRequestBody.json
+              $ref: ../../../framework/requests/beaconRequestBody.yaml
         required: true
       responses:
         '200':
           $ref: '#/components/responses/CollectionsResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
   /cohorts/{id}:
     parameters:
       - $ref: '#/components/parameters/entryId'
@@ -63,7 +63,7 @@ paths:
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
     post:
       description: Get details about one cohort, identified by its (unique) 'id'
       operationId: postOneCohort
@@ -73,14 +73,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../../../framework/requests/beaconRequestBody.json
+              $ref: ../../../framework/requests/beaconRequestBody.yaml
         required: true
       responses:
         '200':
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
   /cohorts/{id}/individuals:
     parameters:
       - $ref: '#/components/parameters/entryId'
@@ -99,7 +99,7 @@ paths:
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
     post:
       description: Get the individuals from one cohort, identified by its (unique)
         'id'
@@ -110,14 +110,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../../../framework/requests/beaconRequestBody.json
+              $ref: ../../../framework/requests/beaconRequestBody.yaml
         required: true
       responses:
         '200':
           $ref: '#/components/responses/ResultsOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
   /cohorts/{id}/filtering_terms:
     parameters:
       - $ref: '#/components/parameters/entryId'
@@ -136,10 +136,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../../framework/responses/beaconFilteringTermsResponse.json
+                $ref: ../../../framework/responses/beaconFilteringTermsResponse.yaml
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
     post:
       description: Get the list of filtering terms that could be used with a given
         cohort, identified by its (unique) 'id'
@@ -150,7 +150,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../../../framework/requests/beaconRequestBody.json
+              $ref: ../../../framework/requests/beaconRequestBody.yaml
         required: true
       responses:
         '200':
@@ -158,10 +158,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../../framework/responses/beaconFilteringTermsResponse.json
+                $ref: ../../../framework/responses/beaconFilteringTermsResponse.yaml
         default:
           description: An unsuccessful operation
-          $ref: ../../../framework/responses/beaconErrorResponse.json
+          $ref: ../../../framework/responses/beaconErrorResponse.yaml
 components:
   responses:
     ResultsOKResponse:
@@ -170,18 +170,18 @@ components:
         application/json:
           schema:
             oneOf:
-              - $ref: ../../../framework/responses/beaconBooleanResponse.json
-              - $ref: ../../../framework/responses/beaconCountResponse.json
-              - $ref: ../../../framework/responses/beaconResultsetsResponse.json
+              - $ref: ../../../framework/responses/beaconBooleanResponse.yaml
+              - $ref: ../../../framework/responses/beaconCountResponse.yaml
+              - $ref: ../../../framework/responses/beaconResultsetsResponse.yaml
     CollectionsResponse:
       description: Successful collection list operation.
       content:
         application/json:
           schema:
             oneOf:
-              - $ref: ../../../framework/responses/beaconBooleanResponse.json
-              - $ref: ../../../framework/responses/beaconCountResponse.json
-              - $ref: ../../../framework/responses/beaconCollectionsResponse.json
+              - $ref: ../../../framework/responses/beaconBooleanResponse.yaml
+              - $ref: ../../../framework/responses/beaconCountResponse.yaml
+              - $ref: ../../../framework/responses/beaconCollectionsResponse.yaml
   parameters:
     requestedSchema:
       name: requestedSchema
@@ -196,12 +196,12 @@ components:
       name: skip
       in: query
       schema:
-        $ref: ../../../framework/common/beaconCommonComponents.json#/definitions/Skip
+        $ref: ../../../framework/common/beaconCommonComponents.yaml#/definitions/Skip
     limit:
       name: limit
       in: query
       schema:
-        $ref: ../../../framework/common/beaconCommonComponents.json#/definitions/Limit
+        $ref: ../../../framework/common/beaconCommonComponents.yaml#/definitions/Limit
     entryId:
       name: id
       in: path

@@ -8,7 +8,7 @@ properties:
   exposureCode:
     description: >-
       Exposure ID. Recommended is a value from Environment Exposure Ontology.
-    $ref: ../../../framework/common/ontologyTerm.json
+    $ref: ../../../framework/common/ontologyTerm.yaml
     examples:
       - id: CHEBI:46661
         label: asbestos

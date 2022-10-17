@@ -21,7 +21,7 @@ properties:
       (which may specify how and what kinds of data will be gathered) that are executed
       as part of an investigation and is realized during a study design execution.
       Value from Ontologized MIABIS (OMIABIS) Study design ontology term tree (OBI:0500000).
-    $ref: ../../../framework/common/ontologyTerm.json
+    $ref: ../../../framework/common/ontologyTerm.yaml
     examples:
       - id: OMIABIS:0001017
         label: case control study design
@@ -224,7 +224,7 @@ definitions:
       Ontology (GeCKO) or others when GeCKO is not applicable.
     type: array
     items:
-      $ref: ../../../framework/common/ontologyTerm.json
+      $ref: ../../../framework/common/ontologyTerm.yaml
     examples:
       - id: OGMS:0000015
         label: clinical history

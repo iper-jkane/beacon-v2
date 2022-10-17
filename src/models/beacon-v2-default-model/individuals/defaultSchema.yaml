@@ -60,7 +60,7 @@ properties:
     items:
       $ref: ../common/exposure.yaml
   info:
-    $ref: ../../../framework/common/beaconCommonComponents.json#/definitions/Info
+    $ref: ../../../framework/common/beaconCommonComponents.yaml#/definitions/Info
 required:
   - id
   - sex

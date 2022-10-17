@@ -24,7 +24,7 @@ paths:
           $ref: '#/components/responses/infoOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../framework/responses/beaconErrorResponse.json
+          $ref: ../../framework/responses/beaconErrorResponse.yaml
   /info:
     parameters:
       - $ref: '#/components/parameters/requestedSchema'
@@ -38,7 +38,7 @@ paths:
           $ref: '#/components/responses/infoOKResponse'
         default:
           description: An unsuccessful operation
-          $ref: ../../framework/responses/beaconErrorResponse.json
+          $ref: ../../framework/responses/beaconErrorResponse.yaml
   /service-info:
     get:
       description: Get information about the beacon using GA4GH ServiceInfo format
@@ -51,7 +51,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../framework/responses/ga4gh-service-info-1-0-0-schema.json
+                $ref: ../../framework/responses/ga4gh-service-info-1-0-0-schema.yaml
   /configuration:
     get:
       description: TBD
@@ -65,10 +65,10 @@ paths:
             application/json:
               schema:
                 description: Response of a request for information about a Beacon
-                $ref: ../../framework/responses/beaconConfigurationResponse.json
+                $ref: ../../framework/responses/beaconConfigurationResponse.yaml
         default:
           description: An unsuccessful operation
-          $ref: ../../framework/responses/beaconErrorResponse.json
+          $ref: ../../framework/responses/beaconErrorResponse.yaml
   /entry_types:
     get:
       description: TBD
@@ -83,10 +83,10 @@ paths:
             application/json:
               schema:
                 description: Response of a request for information about a Beacon
-                $ref: ../../framework/responses/beaconEntryTypesResponse.json
+                $ref: ../../framework/responses/beaconEntryTypesResponse.yaml
         default:
           description: An unsuccessful operation
-          $ref: ../../framework/responses/beaconErrorResponse.json
+          $ref: ../../framework/responses/beaconErrorResponse.yaml
   /map:
     get:
       description: TBD
@@ -101,10 +101,10 @@ paths:
             application/json:
               schema:
                 description: Response of a request for information about a Beacon
-                $ref: ../../framework/responses/beaconMapResponse.json
+                $ref: ../../framework/responses/beaconMapResponse.yaml
         default:
           description: An unsuccessful operation
-          $ref: ../../framework/responses/beaconErrorResponse.json
+          $ref: ../../framework/responses/beaconErrorResponse.yaml
   /filtering_terms:
     parameters:
       - $ref: '#/components/parameters/skip'
@@ -116,10 +116,10 @@ paths:
         - Informational endpoints
       responses:
         '200':
-          $ref: ../../framework/responses/beaconFilteringTermsResponse.json
+          $ref: ../../framework/responses/beaconFilteringTermsResponse.yaml
         default:
           description: An unsuccessful operation
-          $ref: ../../framework/responses/beaconErrorResponse.json
+          $ref: ../../framework/responses/beaconErrorResponse.yaml
 components:
   responses:
     infoOKResponse:
@@ -128,7 +128,7 @@ components:
         application/json:
           schema:
             description: Response of a request for information about a Beacon
-            $ref: ../../framework/responses/beaconInfoResponse.json
+            $ref: ../../framework/responses/beaconInfoResponse.yaml
   parameters:
     requestedSchema:
       name: requestedSchema
@@ -143,9 +143,9 @@ components:
       name: skip
       in: query
       schema:
-        $ref: ../../framework/common/beaconCommonComponents.json#/definitions/Skip
+        $ref: ../../framework/common/beaconCommonComponents.yaml#/definitions/Skip
     limit:
       name: limit
       in: query
       schema:
-        $ref: ../../framework/common/beaconCommonComponents.json#/definitions/Limit
+        $ref: ../../framework/common/beaconCommonComponents.yaml#/definitions/Limit

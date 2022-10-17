@@ -7,7 +7,7 @@ properties:
   evidenceCode:
     description: >-
       An ontology class that represents the evidence type
-    $ref: ../../../framework/common/ontologyTerm.json
+    $ref: ../../../framework/common/ontologyTerm.yaml
     example:
       id: ECO:0006017
       label: author statement from published clinical study used in manual assertion

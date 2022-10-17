@@ -40,7 +40,7 @@ properties:
     examples:
       - http://example.org/wiki/Main_Page
   info:
-    $ref: ../../../framework/common/beaconCommonComponents.json#/definitions/Info
+    $ref: ../../../framework/common/beaconCommonComponents.yaml#/definitions/Info
   dataUseConditions:
     description: Data use conditions applying to this dataset.
     $ref: ../common/dataUseConditions.yaml
