@@ -41,17 +41,17 @@ There is a set of tools in [`/bin`](./bin/) to facilitate the conversion. ATM, a
 ```
 |-docs          TBD; will contain the source for the Readthedocs documentation
 |
-|- framework
+|- src            schema source in YAML format; for editing
 |   |
-|   |- src      schema source in YAML format; for editing
+|   |- framework   
 |   |
-|   |- json     JSON versions of the schema files generated from src, authorative/referenceable version
+|   |- models/beacon-v2-default-model 
 |
-|- models
+|- json           JSON versions of the schema files generated from src, authorative/referenceable version
 |   |
-|   |- src      schema source in YAML format; for editing
+|   |- framework  
 |   |
-|   |- json     JSON versions of the schema files generated from src, authorative/referenceable version
+|   |- models/beacon-v2-default-model
 |
 |- bin          scripts and configurations for creating the unified structure
     |
